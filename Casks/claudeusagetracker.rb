@@ -1,6 +1,6 @@
 cask "claudeusagetracker" do
-  version "1.7.0"
-  sha256 "f7434375bd55e8df522a8f327526268e12c1e9159ab785c4e02e637d13b60eb6"
+  version "1.8.0"
+  sha256 "7bb6bce80730280f8250c16df857778bbc9fc415885784981411be371e2f4ed1"
 
   url "https://github.com/masorange/ClaudeUsageTracker/releases/download/v#{version}/ClaudeUsageTracker-v#{version}.dmg"
   name "Claude Usage Tracker"
@@ -44,7 +44,10 @@ cask "claudeusagetracker" do
 
   caveats do
     <<~EOS
-      Claude Usage Tracker has been #{version == "1.6.0" ? "installed" : "updated"}!
+      Claude Usage Tracker has been updated to v#{version}!
+
+      ⚠️  Important: API data access has been disabled. The app now uses
+      local data for cost estimates.
 
       The app should open automatically. If it doesn't, launch it manually:
         open -a "Claude Usage Tracker"
