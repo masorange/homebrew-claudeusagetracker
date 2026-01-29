@@ -1,6 +1,6 @@
 cask "claudeusagetracker" do
-  version "1.9.0"
-  sha256 "d06d79b8c41650841829cba64c2b867bd478e8c5eddc95df4e12ffd616a97abb"
+  version "1.10.0"
+  sha256 "a79c7de019887deaf71cef2c307fde46a9baabe2ed8cbdc731fbe6f6893101ca"
 
   url "https://github.com/masorange/ClaudeUsageTracker/releases/download/v#{version}/ClaudeUsageTracker-v#{version}.dmg"
   name "Claude Usage Tracker"
@@ -46,8 +46,8 @@ cask "claudeusagetracker" do
     <<~EOS
       Claude Usage Tracker has been updated to v#{version}!
 
-      🆕 New in v1.9.0: Account filter to track only work (Vertex) or
-      personal usage separately. Configure in Settings.
+      🆕 New in v1.10.0: Support for custom config directories via
+      CLAUDE_CONFIG_DIR environment variable.
 
       The app should open automatically. If it doesn't, launch it manually:
         open -a "Claude Usage Tracker"
