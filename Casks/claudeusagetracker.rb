@@ -14,15 +14,8 @@ cask "claudeusagetracker" do
 
   app "ClaudeUsageTracker.app"
 
-  # Close app before upgrade (prevents conflicts)
-  # must_succeed: false allows upgrade even if the app is not running
-  uninstall_preflight do
-    system_command "/usr/bin/killall",
-                   args: ["ClaudeUsageTracker"],
-                   sudo: false,
-                   must_succeed: false,
-                   print_stderr: false
-  end
+  # Gracefully quit the app before uninstall/upgrade (won't fail if app is not running)
+  uninstall quit: "com.claudeusage.tracker"
 
   postflight do
     # Remove quarantine attributes (ignore errors if already removed)
