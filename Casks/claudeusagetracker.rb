@@ -1,6 +1,6 @@
 cask "claudeusagetracker" do
-  version "1.10.0"
-  sha256 "a79c7de019887deaf71cef2c307fde46a9baabe2ed8cbdc731fbe6f6893101ca"
+  version "1.11.0"
+  sha256 "0a54f02a99718920907caabc682381f3452693d74ee178d3ddaccd32f013151c"
 
   url "https://github.com/masorange/ClaudeUsageTracker/releases/download/v#{version}/ClaudeUsageTracker-v#{version}.dmg"
   name "Claude Usage Tracker"
@@ -15,10 +15,12 @@ cask "claudeusagetracker" do
   app "ClaudeUsageTracker.app"
 
   # Close app before upgrade (prevents conflicts)
+  # must_succeed: false allows upgrade even if the app is not running
   uninstall_preflight do
     system_command "/usr/bin/killall",
                    args: ["ClaudeUsageTracker"],
                    sudo: false,
+                   must_succeed: false,
                    print_stderr: false
   end
 
@@ -46,8 +48,10 @@ cask "claudeusagetracker" do
     <<~EOS
       Claude Usage Tracker has been updated to v#{version}!
 
-      🆕 New in v1.10.0: Support for custom config directories via
-      CLAUDE_CONFIG_DIR environment variable.
+      🆕 New in v1.11.0: Major performance optimizations
+      - Reduced CPU usage and heat generation
+      - Smart file caching (only processes changed files)
+      - Auto-refresh now every 5 minutes instead of 1 minute
 
       The app should open automatically. If it doesn't, launch it manually:
         open -a "Claude Usage Tracker"
