@@ -23,11 +23,7 @@ brew install --cask masorange/claudeusagetracker/claudeusagetracker
 ## Update
 
 ```bash
-# Update Homebrew and upgrade all casks
-brew update && brew upgrade
-
-# Or upgrade only Claude Usage Tracker
-brew upgrade --cask claudeusagetracker
+brew update && brew upgrade --cask masorange/claudeusagetracker/claudeusagetracker
 ```
 
 ## Uninstall
