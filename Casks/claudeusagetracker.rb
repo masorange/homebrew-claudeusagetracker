@@ -1,6 +1,6 @@
 cask "claudeusagetracker" do
-  version "1.11.0"
-  sha256 "0a54f02a99718920907caabc682381f3452693d74ee178d3ddaccd32f013151c"
+  version "1.12.0"
+  sha256 "aa3d2abe514bce28810fc7ce9a6f568e85d9413ab769aa16b1dabe06ff415ac6"
 
   url "https://github.com/masorange/ClaudeUsageTracker/releases/download/v#{version}/ClaudeUsageTracker-v#{version}.dmg"
   name "Claude Usage Tracker"
@@ -41,10 +41,10 @@ cask "claudeusagetracker" do
     <<~EOS
       Claude Usage Tracker has been updated to v#{version}!
 
-      🆕 New in v1.11.0: Major performance optimizations
-      - Reduced CPU usage and heat generation
-      - Smart file caching (only processes changed files)
-      - Auto-refresh now every 5 minutes instead of 1 minute
+      🆕 New in v1.12.0: Accurate Vertex AI Regional Pricing
+      - Fixed cache pricing multipliers (creation & read)
+      - Applied Vertex AI Regional 1.1x premium to all Claude models
+      - Added Claude Sonnet 4.6 and Opus 4.6 support
 
       The app should open automatically. If it doesn't, launch it manually:
         open -a "Claude Usage Tracker"
