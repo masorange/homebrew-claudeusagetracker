@@ -1,6 +1,6 @@
 cask "claudeusagetracker" do
-  version "1.12.0"
-  sha256 "aa3d2abe514bce28810fc7ce9a6f568e85d9413ab769aa16b1dabe06ff415ac6"
+  version "1.13.0"
+  sha256 "614a57efa4437f7d44b4c0da5b48fab8a68c431ebf8c8adb7149d0cecce4e885"
 
   url "https://github.com/masorange/ClaudeUsageTracker/releases/download/v#{version}/ClaudeUsageTracker-v#{version}.dmg"
   name "Claude Usage Tracker"
@@ -41,10 +41,9 @@ cask "claudeusagetracker" do
     <<~EOS
       Claude Usage Tracker has been updated to v#{version}!
 
-      🆕 New in v1.12.0: Accurate Vertex AI Regional Pricing
-      - Fixed cache pricing multipliers (creation & read)
-      - Applied Vertex AI Regional 1.1x premium to all Claude models
-      - Added Claude Sonnet 4.6 and Opus 4.6 support
+      🆕 New in v1.13.0: Connect your Google account to Looker Studio
+      for real cost data! On first launch, a prompt will guide you.
+      Also includes significantly improved local cost accuracy.
 
       The app should open automatically. If it doesn't, launch it manually:
         open -a "Claude Usage Tracker"
