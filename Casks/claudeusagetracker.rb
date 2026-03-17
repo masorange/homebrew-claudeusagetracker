@@ -1,6 +1,6 @@
 cask "claudeusagetracker" do
-  version "1.13.0"
-  sha256 "5cffa5d8f537264499ec9d34dd8ddb00e69dd45c93a601cbbfe5f17c54b0cfcc"
+  version "1.14.0"
+  sha256 "76a79f4d1ccc0f22f4cdcd917d5135d49196e08888790c4932c1feb5a531230a"
 
   url "https://github.com/masorange/ClaudeUsageTracker/releases/download/v#{version}/ClaudeUsageTracker-v#{version}.dmg"
   name "Claude Usage Tracker"
@@ -41,9 +41,9 @@ cask "claudeusagetracker" do
     <<~EOS
       Claude Usage Tracker has been updated to v#{version}!
 
-      🆕 New in v1.13.0: Connect your Google account to Looker Studio
-      for real cost data! On first launch, a prompt will guide you.
-      Also includes significantly improved local cost accuracy.
+      🆕 New in v1.14.0: Resilient Looker data parsing. The app now
+      handles dashboard layout changes automatically, parsing all new
+      response formats and deriving KPIs without hardcoded component IDs.
 
       The app should open automatically. If it doesn't, launch it manually:
         open -a "Claude Usage Tracker"
