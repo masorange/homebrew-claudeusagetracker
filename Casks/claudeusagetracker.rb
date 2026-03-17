@@ -1,6 +1,6 @@
 cask "claudeusagetracker" do
-  version "1.14.0"
-  sha256 "76a79f4d1ccc0f22f4cdcd917d5135d49196e08888790c4932c1feb5a531230a"
+  version "1.15.0"
+  sha256 "2394f20cbd395a325ed95c26eaa972515eda6692d4585b28215d64b8632828ad"
 
   url "https://github.com/masorange/ClaudeUsageTracker/releases/download/v#{version}/ClaudeUsageTracker-v#{version}.dmg"
   name "Claude Usage Tracker"
@@ -41,9 +41,9 @@ cask "claudeusagetracker" do
     <<~EOS
       Claude Usage Tracker has been updated to v#{version}!
 
-      🆕 New in v1.14.0: Resilient Looker data parsing. The app now
-      handles dashboard layout changes automatically, parsing all new
-      response formats and deriving KPIs without hardcoded component IDs.
+      🆕 New in v1.15.0: Tier & usage tracking. Shows your team tier
+      (Iron/Bronze/Silver/Gold) with a usage progress bar from Looker data.
+      Looker data now loads first on startup for faster, more accurate costs.
 
       The app should open automatically. If it doesn't, launch it manually:
         open -a "Claude Usage Tracker"
