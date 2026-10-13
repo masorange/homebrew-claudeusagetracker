@@ -1,52 +1,42 @@
 # Homebrew Tap for Claude Usage Tracker
 
-This is a custom Homebrew tap for [Claude Usage Tracker](https://github.com/masorange/ClaudeUsageTracker).
+[Claude Usage Tracker](https://github.com/masorange/ClaudeUsageTracker) shows your MasOrange AI spend, budget and
+available models in the macOS menu bar.
 
-## Installation
-
-### Install with Homebrew
+## Install or update (one command)
 
 ```bash
-# Add the tap
-brew tap masorange/claudeusagetracker
-
-# Install the app
-brew install --cask claudeusagetracker
+curl -fsSL https://raw.githubusercontent.com/masorange/homebrew-claudeusagetracker/main/install.sh | bash
 ```
 
-### One-liner installation
+The same command installs the app, updates it to the latest version, and fixes old installations made from the
+previous taps (`masmovil/…`, `SergioBanuls/…`). Your settings and sign-in are kept. The app opens when it finishes:
+click the **💰** icon in the menu bar and sign in once with your MasOrange account (SSO).
+
+Requirements: macOS 13 (Ventura) or later and [Homebrew](https://brew.sh).
+
+## Prefer plain Homebrew commands?
 
 ```bash
+# Install
 brew install --cask masorange/claudeusagetracker/claudeusagetracker
-```
+open -a ClaudeUsageTracker
 
-## Update
-
-```bash
+# Update
 brew update && brew upgrade --cask masorange/claudeusagetracker/claudeusagetracker
-```
 
-## Uninstall
-
-```bash
+# Uninstall (add --zap to also remove settings, cache and sign-in data)
 brew uninstall --cask claudeusagetracker
 ```
 
-## About Claude Usage Tracker
+## Troubleshooting
 
-Track your Claude Code API usage directly from your macOS menu bar with accurate cost calculations.
-
-### Features
-
-- 🎯 Accurate cost tracking with turn grouping
-- 📊 Real-time monitoring from menu bar
-- 📅 Monthly and project-based breakdowns
-- 📈 Detailed token metrics
-- ⚙️ Configurable pricing
-- 🌍 Multi-language (English/Spanish)
-- 🔒 Privacy-first (all data stays local)
-
-For more information, visit the [main repository](https://github.com/masorange/ClaudeUsageTracker).
+| Message | Fix |
+|---|---|
+| `Cask claudeusagetracker exists in multiple taps` | You still have an old tap. Run the one-command installer above, or `brew untap masmovil/claudeusagetracker`. |
+| `"ClaudeUsageTracker" is damaged and can't be opened` | Run `xattr -cr /Applications/ClaudeUsageTracker.app` and open it again. |
+| `It seems there is already an App at '/Applications/ClaudeUsageTracker.app'` | It was installed by hand from the DMG. The one-command installer replaces it, or use `brew install --cask --force …`. |
+| The menu bar shows `💰 ⚠︎` | Your corporate session expired: click the icon and press **Sign in**. |
 
 ## License
 
