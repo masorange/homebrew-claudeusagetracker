@@ -1,6 +1,6 @@
 cask "claudeusagetracker" do
-  version "1.15.0"
-  sha256 "2394f20cbd395a325ed95c26eaa972515eda6692d4585b28215d64b8632828ad"
+  version "2.0.0"
+  sha256 "490eb60caca03b392992f6ae5274362eee87d3ca2db6e4cdd2b9c19b125c2b50"
 
   url "https://github.com/masorange/ClaudeUsageTracker/releases/download/v#{version}/ClaudeUsageTracker-v#{version}.dmg"
   name "Claude Usage Tracker"
@@ -41,14 +41,13 @@ cask "claudeusagetracker" do
     <<~EOS
       Claude Usage Tracker has been updated to v#{version}!
 
-      🆕 New in v1.15.0: Tier & usage tracking. Shows your team tier
-      (Iron/Bronze/Silver/Gold) with a usage progress bar from Looker data.
-      Looker data now loads first on startup for faster, more accurate costs.
+      🆕 New in v2.0.0: data now comes from AI Platform
+      (ai-platform.cloud.masorange.es). Click the 💰 icon in the menu bar
+      and sign in once with your corporate account (SSO). New Models tab
+      with every available model, its vendor logo and current price.
 
       The app should open automatically. If it doesn't, launch it manually:
         open -a "Claude Usage Tracker"
-
-      The app runs in your menu bar. Look for the 💰 icon.
     EOS
   end
 
